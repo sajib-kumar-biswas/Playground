@@ -1,9 +1,9 @@
 import './App.css';
-import ReactInterviewConcept from './Components/ReactInterviewConcept';
+import AsyncAwaitPromise from './Components/AsyncAwaitPromise';
 
 function App() {
   return (
-    <ReactInterviewConcept />
+    <AsyncAwaitPromise />
   )
 }
 
