@@ -1,26 +1,25 @@
 {/* https://www.freecodecamp.org/news/javascript-async-await-tutorial-learn-callbacks-promises-async-await-by-making-icecream/ */}
 
+let stocks = {
+    Fruits : ["strawberry", "grapes", "banana", "apple"],
+    liquid : ["water", "ice"],
+    holder : ["cone", "cup", "stick"],
+    toppings : ["chocolate", "peanuts"]
+};
+
+{/* https://medium.com/nerd-for-tech/fetch-api-async-await-in-a-few-bites-6b4f19f7db9e 
+
+    a great  introduction.
+*/}
+
 const AsyncAwaitPromise = () => {
-    const helper = ()=>{
-        console.log('i');
-        console.log('eat');
-        console.log('ice-cream.');
-    }
-    const helper1 = ()=>{
-        console.log('i');
-        setTimeout(()=>{
-            console.log('eat');
-        },2000);
-        console.log('ice-cream.');
-    }
-    helper();
-    helper1();
+    
     return (
         <div>
-            <h1>Learning Async and Sync function...</h1>
-            <p>See the code in the components js section.</p>
-
             <h1>Callbacks</h1>
+            <p>
+                See code in the js section
+            </p>
             <p>
                 first thing first, why do we even need callbacks ? 
             </p>
