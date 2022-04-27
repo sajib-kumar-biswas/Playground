@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useReducer } from "react"
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -11,15 +11,26 @@ const Button = styled.button`
     background: teal;
 `
 
+const reducer = (count,action) => {
+  switch(action.type){
+    case 'increment':
+      return count + 1;
+    case 'decrement':
+      return count - 1;
+    default:
+      return 0;
+  }
+}
+
 function ReactHook() {
-  const [count, setCount] = useState(0);
+  const[count,dispatch] = useReducer(reducer,0);
 
   return (
     <>
       <h2>{count}</h2>
-      <Button onClick={() => setCount(0)}>Reset</Button>
-      <Button onClick={() => setCount((prevCount) => { return prevCount - 1 })}>-</Button>
-      <Button onClick={() => setCount(prevCount => prevCount + 1)}>+</Button>
+      <Button onClick={() => dispatch({type: 'reset'})}>Reset</Button>
+      <Button onClick={() => dispatch({type: 'decrement'})}>-</Button>
+      <Button onClick={() => dispatch({type: 'increment'})}>+</Button>
     </>
   )
 }
