@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap'
+import { Button, Container, Form, FormControl, Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap'
 const BootNavbar = () => {
     return (
         <Navbar bg="dark" variant='dark' expand="lg">
@@ -6,7 +6,7 @@ const BootNavbar = () => {
                 <NavbarBrand><img src="https://react-bootstrap.github.io/logo.svg" height="30px" width="30px" alt="react bootstrap logo" />{' '}React Bootstrap</NavbarBrand>
                 <Navbar.Toggle aria-controls='id' />
                 <Navbar.Collapse id="id">
-                    <Nav className='ms-auto'>
+                    <Nav>
                         <Nav.Link>
                             Home
                         </Nav.Link>
@@ -28,6 +28,10 @@ const BootNavbar = () => {
                             </NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
+                    <Form className='ms-auto d-flex'>
+                        <FormControl className='me-2' type="search" placeholder='search' />
+                        <Button className='ms-2' variant="outline-primary">Search</Button>
+                    </Form>
                 </Navbar.Collapse>
             </Container>
         </Navbar>
