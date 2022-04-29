@@ -5,8 +5,8 @@ import Footer from './Components/Footer';
 import Home from './Pages/Home';
 import Product from './Pages/Product';
 import styled from 'styled-components';
-import ReactHook from './Components/ReactHook';
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import BootNavbar from './Components/BootNavbar'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,13 +22,13 @@ function App() {
       <BrowserRouter>
         <Container>
           <Navbar />
+          <BootNavbar />
           <Main>
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/product' element={<Product />} />
             </Routes>
           </Main>
-          <ReactHook />
           <Footer />
         </Container>
       </BrowserRouter>
