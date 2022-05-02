@@ -1,4 +1,5 @@
 import { Button, Container, Form, FormControl, Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom';
 const BootNavbar = () => {
     return (
         <Navbar bg="dark" variant='dark' expand="lg">
@@ -13,9 +14,12 @@ const BootNavbar = () => {
                         <Nav.Link>
                             Skills
                         </Nav.Link>
-                        <Nav.Link>
+                        <Nav.Link >
                             Projects
                         </Nav.Link>
+                        <NavLink to={'/cards'}>
+                            Cards
+                        </NavLink>
                         <NavDropdown title="Dropdownlist"> 
                             <NavDropdown.Item>
                                 Sample1

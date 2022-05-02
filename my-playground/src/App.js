@@ -7,6 +7,7 @@ import Product from './Pages/Product';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import BootNavbar from './Components/BootNavbar'
+import BootCardPage from './Pages/BootCardPage';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,6 +28,7 @@ function App() {
             <Routes>
               <Route path='/' element={<Home />} />
               <Route path='/product' element={<Product />} />
+              <Route path='/cards' element={<BootCardPage />} />
             </Routes>
           </Main>
           <Footer />
